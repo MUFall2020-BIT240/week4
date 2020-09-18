@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>Nested Conditionals</title>
+	</head>
+	<body>
+		<h1>Nested if/else statements</h1>
+		<p>It's entirely possible to nest if/else statements inside of each other.<p>
+		<p>Look at the javascript on this page to figure out how</p>
+		
+		<script>
+			var in_class = true;
+			var bored = true;
+					
+			// our first conditional
+			if(in_class) {
+				console.log("You ARE in class!");
+				
+				// our second conditional, nested inside of the "true" code of the first conditional
+				if(bored) {
+					console.log("Brock is a bad teacher.");
+				} else {
+					console.log("Brock is a good teacher!");
+				}
+				
+			} else {
+				console.log("You're not in class.");
+			}
+			
+		</script>
+	</body>
+</html>
