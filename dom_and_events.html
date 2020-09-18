@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>DOM and Events</title>
+	</head>
+	<body>
+		<h1 id="heading"></h1>
+		
+		<p>User text: <span id="user_text"></span></p>
+		
+		<input type="text">
+		<button>GO!</button>
+		
+		<script>
+		
+			var empty_heading = document.getElementById("heading");
+			console.log(empty_heading);
+			console.log(empty_heading.innerText);
+			empty_heading.innerText = "Hello world!";
+		
+			var user_text = document.getElementById("user_text");
+			//1. create variable
+			var user_input = "";
+			
+			//2. prompt user for input
+			//3. assign user input to new variable
+			//user_input = prompt("Please give me the password");
+			
+			//4. set innerText property of user_text to variable 
+			user_text.innerText = user_input;
+			
+			///////////////////////////////////////////////
+			// INPUTS
+			///////////////////////////////////////////////
+			var text_input = document.getElementsByTagName("input")[0];
+			var button = document.getElementsByTagName("button")[0];
+			
+			// get the text in the html input, save in variable
+			var captureText = function() {
+				console.error("Button was clicked!");
+				
+				// get text from the input
+				var words = text_input.value;
+				
+				// put it on the page
+				user_text.innerText = words;
+			}
+			
+			console.log(button);
+			
+			// user clicks button
+			button.addEventListener("click", captureText); // 2 arguments: what are we listening for, and what function will run when it happens?
+			
+			// put that text on the page
+			
+		</script>
+	</body>
+</html>

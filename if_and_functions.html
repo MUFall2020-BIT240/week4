@@ -1,0 +1,99 @@
+<html>
+	<head>
+		<title>Week 4 In-class</title>
+		<script>
+			var my_age = 40;
+			
+			if(my_age == 25) {
+				console.log("Congratz on being the best age ever!");
+			} else if(my_age < 19) {
+				console.log("You need parental permission?");
+			} else if(my_age > 34) {
+				// this happens if the condition is true
+				console.log("You gettin' over the hill.");
+			} else {
+				// this happens if the condition is false
+				console.log("Poggers");
+			}
+			
+			var activity = "class";
+			var next_activity;
+			var bored = false; //boolean
+			if(bored) {
+				next_activity = "Netflix";
+			} else {
+				next_activity = "Homework";
+			}
+			
+			console.log("Next activity is " + next_activity);
+			
+			/////////////////////////////////////////////
+			/// BOREDEM CHECKER
+			/////////////////////////////////////////////
+			
+			var bored_meter = 0;
+			var me = {
+				tired_eyes: true,
+				on_phone: true,
+				mind_wandering: true
+			}
+			
+			// subsection of the 3 
+			
+			// calculate bored_meter
+			if(me.tired_eyes) bored_meter++;
+			if(me.on_phone) bored_meter++;
+			if(me.mind_wandering) bored_meter++;
+			
+			console.log("Bored Meter is currently at " + bored_meter);
+			
+			if(bored_meter >= 2) {
+				alert("Change activity");
+			} else {
+				alert("You are engaged!");
+			}
+			
+			// checking all 3 
+			if(me.tired_eyes && me.mind_wandering && me.on_phone) {
+				console.log("You are tired");
+			} else {
+				console.log("Keep it up!");
+			}
+			
+			// because I sat in the back of my 2pm class and it was dark
+			me.tired_eyes = true;
+			
+			if(me.tired_eyes && me.mind_wandering && me.on_phone) {
+				console.log("You are tired");
+			} else {
+				console.log("Keep it up!");
+			}
+			
+			// creating the function, defining the parameters
+			var am_i_bored = function(the_me_obj, name) {
+				console.log("Me Data: " + name, the_me_obj);
+				
+				if(the_me_obj.tired_eyes && the_me_obj.mind_wandering && the_me_obj.on_phone) {
+					console.warn("You are tired");
+				} else {
+					console.warn("Keep it up!");
+				}
+			}
+			
+			// using the function and giving it an argument
+			am_i_bored(me, "Brock");
+			
+			// Goes to BIT240, get's energized!
+			me.tired_eyes = false;
+			me.mind_wandering = false;
+			me.on_phone = false;
+			
+			am_i_bored(me, "Brock");
+			
+			
+		</script>
+	</head>
+	<body>
+		<h1>Week 4 In-class</h1>
+	</body>
+</html>
