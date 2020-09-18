@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>How to Rock/paper/scissors</title>
+	</head>
+	<body>
+		<h1>Rock/paper/scissors help</h1>
+		<p>When playing this game, you'll be playing against the computer
+		and you'll need to randomly generate a selection for them.<p>
+		<p>Look at the javascript on this page to figure out how to randomly select
+		an option from a list</p>
+		
+		<script>
+			// create an array with the 3 options we can pick from
+			var choices = ["rock", "paper", "scissors"];
+			
+			// Few things going on here:
+			// 1. Math.floor() is a function used to round a number DOWN (thus the use of the word "floor")
+			// https://www.w3schools.com/Jsref/jsref_floor.asp
+			
+			// 2. Math.random() is a function that generates a random number between 0 and 1
+			// https://www.w3schools.com/js/js_random.asp
+			
+			// 3. We multiply the VERY SMALL random number by the number of options we have to pick from
+			// 4. Because the choices array is 0 indexed, we really only want 0, 1, or 2
+			// Making sure we round DOWN will make sure we only ever get 0, 1, or 2
+			
+			var random_number = Math.floor(Math.random() * 3);
+			
+			console.log("Should be rock, paper, or scissors: ", choices[random_number]);
+		
+		</script>
+	</body>
+</html>
